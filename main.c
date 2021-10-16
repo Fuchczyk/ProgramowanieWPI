@@ -3,12 +3,10 @@
 
 int main(void)
 {
-	int arr[] = {0, -1, 0, 1, 1, -1, 1, 0, 0, 1};
-	sortujLiczby(arr, 9);
-	for(int i=1 ; i<=9 ; i++)
-	{
-		printf("%i ", arr[i]);
-	}
-	putchar('\n');
+	int m;
+	int a[15] = {2,1,10,4,3,6,6,2,4,1,2,0,3,2,5};
+	scanf("%i", &m);
+	
+	printf("Segment długości %i ma minimalną sumę %i\n", m, mini_m_segment(a, 15, m));
 	return 0;
 }

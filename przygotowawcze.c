@@ -23,3 +23,44 @@ void sortujLiczby(int arr[], int n)
 		else bezpieczneZamien(arr, b, c--);
 	}
 }
+
+void flagaPolski(int arr[], int n)
+{
+	int poczatek = 1;
+	int koniec = n;
+
+	while (poczatek < koniec)
+	{
+		int kolor = arr[poczatek];
+		
+		if (kolor == 'c')
+		{
+			bezpieczneZamien(arr, poczatek, koniec);
+			koniec--;
+		}
+		else
+		{
+			poczatek++;
+		}
+	}
+}
+
+int mini_m_segment(int arr[], int n, int m)
+{
+	int suma = 0;
+	if (m == 0) return 0;
+	for(int i=0 ; i<m ; i++)
+	{
+		suma+=arr[i];
+	}
+	int minimum = suma;
+	int wsk = m;
+	while (wsk < n)
+	{
+		suma+=arr[wsk];
+		suma-=arr[wsk-m];
+		if (suma < minimum) minimum = suma;
+		wsk++;
+	}
+	return minimum;
+}

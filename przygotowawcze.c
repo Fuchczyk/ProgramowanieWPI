@@ -64,3 +64,62 @@ int mini_m_segment(int arr[], int n, int m)
 	}
 	return minimum;
 }
+
+int jedenSasiad(int arr[], int n)
+{
+	if (n==1) return 0;
+
+	if (n==2)
+	{
+		if (arr[1]!=arr[2]) return 1;
+		return 0;
+	}
+
+	int pierwszy = arr[1];
+	int drugi = arr[2];
+	int trzeci = arr[3];
+	int wsk = 4;
+
+	if (pierwszy == drugi) return 0;
+
+	while (wsk<=n)
+	{
+		if((drugi == pierwszy && trzeci == drugi) || (pierwszy!=drugi && pierwszy == trzeci))
+		{
+			return 0;
+		}
+		pierwszy = drugi;
+		drugi = trzeci;
+		trzeci = arr[wsk];
+		wsk++;
+	}
+
+	if ((drugi == pierwszy && trzeci == drugi) || (pierwszy!=drugi && pierwszy == trzeci))
+	{
+		return 0;
+	}
+	return 1;
+}
+
+int czyBialoCzerwona(int arr[], int n)
+{
+	if (n<=1) return 1;
+	int wsk = 1;
+	int czySpotkanoCzerwony = 0;
+
+	while (wsk<=n)
+	{
+		int kolor = arr[wsk];
+		if (!czySpotkanoCzerwony)
+		{
+			if (kolor == 'c') czySpotkanoCzerwony = 1;
+		}
+		else
+		{
+			if(kolor == 'b') return 0;
+		}
+		wsk++;
+	}
+
+	return 1;
+}

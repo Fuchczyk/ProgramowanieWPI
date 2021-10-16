@@ -25,4 +25,19 @@ void flagaPolski(int arr[], int n);
  * operacji arytmetycznych, które Twój algorytm wykona
  */
 int mini_m_segment(int arr[], int m, int n);
+
+/* Napisz fragment programu, który sprawdza warunek:
+ * każda urna ma dokładnie jednego sąsiada innego koloru.
+ * 1 - spełniony warunek, 0 - niespełniony warunek.
+ * Użyte kolory to czerwony(0) i biały(1)
+ */
+int jedenSasiad(int arr[], int n);
+
+/* Napisz fragment programu, który sprawdza warunek:
+ * wszystkie żetony białe znajdują się w indeksach
+ * mniejszych niż żetony czerwone. Urny numerowane są od 1 do n
+ * n>=0, dla n=0 nie ma żadnej urny. Postaraj się wywołać sprawdzenie
+ * zawartości jak najmniej razy.
+ */
+int czyBialoCzerwona(int arr[], int n);
 #endif

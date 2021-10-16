@@ -4,9 +4,15 @@
 int main(void)
 {
 	int m;
-	int a[15] = {2,1,10,4,3,6,6,2,4,1,2,0,3,2,5};
 	scanf("%i", &m);
-	
-	printf("Segment długości %i ma minimalną sumę %i\n", m, mini_m_segment(a, 15, m));
+	int a[m+1];
+	for(int i=1 ; i<=m ; i++)
+	{
+		char c;
+		scanf("%c", &c);
+		a[i] = (int)c;
+	}
+		
+	printf("%i\n", czyBialoCzerwona(a, m));
 	return 0;
 }

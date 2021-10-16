@@ -123,3 +123,28 @@ int czyBialoCzerwona(int arr[], int n)
 
 	return 1;
 }
+
+void flagaAustrii(int arr[], int n)
+{
+	int cw = 0;
+	if (n%2 == 0) cw = n+2;
+	else cw = n+1;
+	int pocz = 1;
+	int kon = 4*n-1;
+	
+	while(cw < kon)
+	{
+		if(pocz <= n)
+		{
+			bezpieczneZamien(arr, pocz, cw);
+			pocz += 2;
+			cw += 2;
+		}
+		else
+		{
+			bezpieczneZamien(arr, cw, kon);
+			cw += 2;
+			kon -= 2;
+		}
+	}
+}

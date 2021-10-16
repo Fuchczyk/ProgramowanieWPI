@@ -5,14 +5,20 @@ int main(void)
 {
 	int m;
 	scanf("%i", &m);
-	int a[m+1];
-	for(int i=1 ; i<=m ; i++)
+	int a[m*4+1];
+	
+	for(int i=1 ; i<=4*m ; i++)
 	{
-		char c;
-		scanf("%c", &c);
-		a[i] = (int)c;
+		if (i%2 == 1) a[i] = 'c';
+		else a[i] = 'b';
 	}
-		
-	printf("%i\n", czyBialoCzerwona(a, m));
+	
+	flagaAustrii(a, m);
+
+	for (int i=1 ; i<= 4*m ; i++)
+	{
+		printf("%c ", a[i]);
+	}
+	putchar('\n');
 	return 0;
 }

@@ -40,4 +40,10 @@ int jedenSasiad(int arr[], int n);
  * zawartości jak najmniej razy.
  */
 int czyBialoCzerwona(int arr[], int n);
+
+/* Zadanie o fladze Austrii: w urnach ponumerowanych od 1 do 4n znajdują się
+ * żetony (na pozycjach nieparzystych są żetony czerwone a na parzystych białe).
+ * Mając procedurę Zamien(), poukładaj flagę Austrii. n czerwonych, 2n białych, n czerwonych.
+ */
+void flagaAustrii(int arr[], int n);
 #endif

@@ -148,3 +148,17 @@ void flagaAustrii(int arr[], int n)
 		}
 	}
 }
+
+void sortujTrojkiCB(int arr[], int n)
+{
+	if (n==0) return;
+	int pocz = 3;
+	int kon = n-1;
+	while (pocz < kon)
+	{
+		bezpieczneZamien(arr, pocz, kon);
+		pocz+=3;
+		kon-=1;
+		if (kon%3==0) kon-=1;
+	}
+}

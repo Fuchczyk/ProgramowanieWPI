@@ -3,21 +3,26 @@
 
 int main(void)
 {
-	int m;
-	scanf("%i", &m);
-	int a[m*4+1];
-	
-	for(int i=1 ; i<=4*m ; i++)
+	int n;
+	scanf("%i", &n);
+	int arr[3*n+1];
+	for(int i=1 ; i<= 3*n ; i++)
 	{
-		if (i%2 == 1) a[i] = 'c';
-		else a[i] = 'b';
+		if (i%3==0) arr[i] = 'b';
+		else arr[i] = 'c';
 	}
-	
-	flagaAustrii(a, m);
 
-	for (int i=1 ; i<= 4*m ; i++)
+	for(int i=1 ; i<=3*n ; i++)
 	{
-		printf("%c ", a[i]);
+		printf("%c ", arr[i]);
+	}
+
+	sortujTrojkiCB(arr, 3*n);
+	putchar('\n');
+
+	for(int i=1 ; i<=3*n ; i++)
+	{
+		printf("%c ", arr[i]);
 	}
 	putchar('\n');
 	return 0;

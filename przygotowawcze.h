@@ -46,4 +46,10 @@ int czyBialoCzerwona(int arr[], int n);
  * Mając procedurę Zamien(), poukładaj flagę Austrii. n czerwonych, 2n białych, n czerwonych.
  */
 void flagaAustrii(int arr[], int n);
+
+/* Liczba n jest nieujemna i podzielna przez 3. W urnach są ułożone żetony według
+ * wzoru ccbccbccb...ccb. Ułóż je tak, aby czerwone znajdowały się przed białymi.
+ * Możesz używać tylko procedury zamieniającej dwa żetony.
+ */
+void sortujTrojkiCB(int arr[], int n);
 #endif

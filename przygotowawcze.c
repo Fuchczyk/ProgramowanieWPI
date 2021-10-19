@@ -84,7 +84,7 @@ int jedenSasiad(int arr[], int n)
 
 	while (wsk<=n)
 	{
-		if((drugi == pierwszy && trzeci == drugi) || (pierwszy!=drugi && pierwszy == trzeci))
+		if (pierwszy == trzeci)
 		{
 			return 0;
 		}
@@ -94,7 +94,7 @@ int jedenSasiad(int arr[], int n)
 		wsk++;
 	}
 
-	if ((drugi == pierwszy && trzeci == drugi) || (pierwszy!=drugi && pierwszy == trzeci))
+	if (pierwszy == trzeci)
 	{
 		return 0;
 	}

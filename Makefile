@@ -1,2 +1,2 @@
 main:
-	gcc main.c przygotowawcze.c -o main
+	gcc main.c przygotowawcze.c przygotowawcze1.c -o main

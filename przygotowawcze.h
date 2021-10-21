@@ -52,4 +52,12 @@ void flagaAustrii(int arr[], int n);
  * Możesz używać tylko procedury zamieniającej dwa żetony.
  */
 void sortujTrojkiCB(int arr[], int n);
+
+/* Przyjmuje tablicę charów ('b' oraz 'c'), które oznaczają żetony w kolorach
+ * czerwonym i białym. Rozmiar tablicy to n. Należy napisać program
+ * który oblicza ilość białych segmentów i zwraca tę ilość (jako funkcja).
+ * np. bbcccbbcbccb ma 4 białe segmenty.
+ */
+int bialeSegmenty(int arr[], int n);
+
 #endif

@@ -162,3 +162,28 @@ void sortujTrojkiCB(int arr[], int n)
 		if (kon%3==0) kon-=1;
 	}
 }
+
+int bialeSegmenty(int arr[], int n)
+{
+	int ilosc = 0;
+	int flaga = 0;
+
+	for (int i=1 ; i<=n ; i++)
+	{
+		if (arr[i] == 'b')
+		{
+			flaga = 1;
+		}
+		else
+		{
+			if (flaga == 1)
+			{
+				flaga = 0;
+				ilosc++;
+			}
+		}
+	}
+
+	if (flaga == 1) return ilosc+1;
+	else return ilosc;
+}
